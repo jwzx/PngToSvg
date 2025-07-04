@@ -1,9 +1,17 @@
+/*
+ * @Description:
+ * @Author: jwzx
+ * @Date: 2025-06-27 11:54:53
+ * @LastEditTime: 2025-06-27 13:10:02
+ * @LastEditors: jwzx
+ * @FilePath: \electron-egg\frontend\src\utils\ipcRenderer.js
+ */
 const Renderer = (window.require && window.require('electron')) || window.electron || {};
 
 /**
  * ipc
  * 官方api说明：https://www.electronjs.org/zh/docs/latest/api/ipc-renderer
- * 
+ *
  * 属性/方法
  * ipc.invoke(channel, param) - 发送异步消息（invoke/handle 模型）
  * ipc.sendSync(channel, param) - 发送同步消息（send/on 模型）
