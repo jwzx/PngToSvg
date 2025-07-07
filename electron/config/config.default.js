@@ -1,17 +1,17 @@
 'use strict';
 
 const path = require('path');
-const { getBaseDir } = require('ee-core/ps');
+const { getBaseDir ,appVersion} = require('ee-core/ps');
 
 /**
  * 默认配置
  */
-module.exports = () => {
+module.exports = (appInfo) => {
   return {
     openDevTools: true,
     singleLock: true,
     windowsOption: {
-      title: 'pngToSvg',
+      title: `pngToSvg-${appVersion() }`,
       width: 980,
       height: 650,
       minWidth: 400,
@@ -35,7 +35,7 @@ module.exports = () => {
     },
     remote: {
       enable: false,
-      url: 'http://electron-egg.kaka996.com/'
+      url: 'http://221.226.15.10:19157/PngToSvg/'
     },
     socketServer: {
       enable: false,
@@ -64,6 +64,26 @@ module.exports = () => {
     mainServer: {
       indexPath: '/public/dist/index.html',
       channelSeparator: '/',
+    },
+    addons:{
+      tray: {
+        enable: true,
+        title: '安徽移动播放器',
+        icon: '/public/images/tray.png'
+      },
+      autoUpdater: {
+        enable: true,
+        windows: true, 
+        macOS: false, 
+        linux: false,
+        options: {
+          provider: 'generic', 
+          // njxj升级服务地址
+          url: 'http://221.226.15.10:19157/PngToSvg/'
+        },
+        force: true,
+      }
     }
+  
   }
 }

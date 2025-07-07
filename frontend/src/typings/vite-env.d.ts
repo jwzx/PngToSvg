@@ -116,3 +116,5 @@ declare namespace Env {
 interface ImportMeta {
   readonly env: Env.ImportMeta;
 }
+
+declare const APP_VERSION: string;

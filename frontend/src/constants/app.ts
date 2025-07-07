@@ -1,3 +1,11 @@
+/*
+ * @Description:
+ * @Author: jwzx
+ * @Date: 2025-06-20 09:36:06
+ * @LastEditTime: 2025-07-07 09:43:02
+ * @LastEditors: jwzx
+ * @FilePath: \electron-egg\frontend\src\constants\app.ts
+ */
 import { transformRecordToOption } from '@/utils/common';
 
 export const GLOBAL_HEADER_MENU_ID = '__GLOBAL_HEADER_MENU__';

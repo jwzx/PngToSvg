@@ -35,7 +35,7 @@
   "publish": [
     {
       "provider": "generic",
-      "url": "https://github.com/wallace5303/electron-egg"
+      "url": "http://221.226.15.10:19157/PngToSvg/"
     }
   ],
   "win": {

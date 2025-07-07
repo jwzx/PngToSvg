@@ -2,7 +2,7 @@
  * @Description:
  * @Author: jwzx
  * @Date: 2025-06-20 09:36:06
- * @LastEditTime: 2025-07-03 13:40:03
+ * @LastEditTime: 2025-07-04 17:49:54
  * @LastEditors: jwzx
  * @FilePath: \electron-egg\frontend\vite.config.ts
  */
@@ -37,12 +37,13 @@ export default defineConfig(configEnv => {
     },
     plugins: setupVitePlugins(viteEnv, buildTime),
     define: {
-      BUILD_TIME: JSON.stringify(buildTime)
+      BUILD_TIME: JSON.stringify(buildTime),
+      APP_VERSION: JSON.stringify(process.env.npm_package_version),
     },
     server: {
       host: '0.0.0.0',
       port: 28080,
-      open: true,
+      open: false,
       proxy: createViteProxy(viteEnv, enableProxy)
     },
     preview: {

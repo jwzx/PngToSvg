@@ -1,7 +1,16 @@
+/*
+ * @Description: 
+ * @Author: jwzx
+ * @Date: 2025-04-01 13:10:56
+ * @LastEditTime: 2025-07-07 11:29:13
+ * @LastEditors: jwzx
+ * @FilePath: \electron-egg\electron\controller\example.js
+ */
 'use strict';
 
 const { logger } = require('ee-core/log');
 const { exampleService } = require('../service/example');
+console.log("根目录",process.cwd())
 
 /**
  * example
@@ -23,6 +32,9 @@ class ExampleController {
     logger.info('service result:', result);
 
     return 'hello electron-egg';
+  }
+  async version(){
+    return exampleService.version();
   }
 }
 ExampleController.toString = () => '[class ExampleController]';

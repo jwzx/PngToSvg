@@ -2,7 +2,7 @@
  * @Description:
  * @Author: jwzx
  * @Date: 2025-06-27 11:54:53
- * @LastEditTime: 2025-06-27 13:10:02
+ * @LastEditTime: 2025-07-07 13:40:30
  * @LastEditors: jwzx
  * @FilePath: \electron-egg\frontend\src\utils\ipcRenderer.js
  */

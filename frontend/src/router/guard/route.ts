@@ -18,8 +18,7 @@ import { getRouteName } from '@/router/elegant/transform';
  */
 export function createRouteGuard(router: Router) {
   router.beforeEach(async (to, from, next) => {
-
-    debugger
+  
     const location = await initRoute(to);
     if (location) {
       next(location);
@@ -68,6 +67,7 @@ export function createRouteGuard(router: Router) {
     // switch route normally
     handleRouteSwitch(to, from, next);
   });
+
 }
 
 /**

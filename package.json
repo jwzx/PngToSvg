@@ -1,11 +1,12 @@
 {
   "name": "pngToSvg",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "png to svg convert tool",
   "main": "./public/electron/main.js",
   "scripts": {
     "dev": "ee-bin dev",
     "build": "npm run build-frontend && npm run build-electron && ee-bin encrypt",
+    "build1": "npm run build-frontend && npm run build-electron ",
     "start": "ee-bin start",
     "dev-frontend": "ee-bin dev --serve=frontend",
     "dev-electron": "ee-bin dev --serve=electron",

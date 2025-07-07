@@ -3,9 +3,16 @@
  *************************************************/
 
  const { logger } = require('ee-core/log');
+ const {autoUpdaterService} = require('../service/os/auto_updater');
+ const {trayAddon} = require("../service/os/tray")
+
+
  
  function preload() {
    logger.info('[preload] load 1');
+
+   autoUpdaterService.create();
+   trayAddon.create();
  }
  
  /**

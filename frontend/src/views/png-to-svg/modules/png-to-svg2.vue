@@ -342,11 +342,11 @@ const rowKey = (row: RowData) => {
 <template>
   <NCard :bordered="false" size="small" class="card-wrapper">
     <n-upload multiple directory-dnd :max="20" :file-list="fileList" :accept="acceptType" @change="handleUploadChange"
-      @update:file-list="handleFileListChange">
+    >
       <n-upload-dragger>
         <div style="margin-bottom: 12px">
           <n-icon size="48" :depth="3">
-            <ArchiveIcon />
+            <SvgIcon local-icon="CloudUpload" />
           </n-icon>
         </div>
         <n-text style="font-size: 16px">
@@ -369,7 +369,7 @@ const rowKey = (row: RowData) => {
     </n-flex>
     <n-spin :show="appSettings.show">
     <n-data-table :columns="columns" :data="formatImgList" :bordered="false" :row-key="rowKey"
-      @update:checked-row-keys="handleCheck" :max-height="250" />
+     :max-height="250" />
     </n-spin>
 
   </NCard>
