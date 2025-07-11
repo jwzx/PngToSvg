@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jwzx
  * @Date: 2024-12-27 13:40:18
- * @LastEditTime: 2025-07-07 10:33:52
+ * @LastEditTime: 2025-07-10 17:20:00
  * @LastEditors: jwzx
  * @FilePath: \electron-egg\electron\service\os\tray.js
  */
@@ -53,6 +53,7 @@ class TrayAddon {
     ]
     // 设置一个标识，用来控制窗口退出。
     Electron.setCloseAndQuit(false)
+    mainWindow.setMenu(null)
     // 点击关闭，最小化到托盘
     mainWindow.on('close', (event) => {
         if (Electron.getCloseAndQuit()) {

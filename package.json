@@ -1,6 +1,6 @@
 {
   "name": "pngToSvg",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "png to svg convert tool",
   "main": "./public/electron/main.js",
   "scripts": {
